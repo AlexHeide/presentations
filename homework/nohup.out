@@ -1,0 +1,53 @@
+/home/zander/github/optavc/submitscripts/sge/vulcan_programs.py:25: SyntaxWarning: invalid escape sequence '\;'
+  orca = """# Set Orca Variables
+/home/zander/github/optavc/submitscripts/slurm/sapelo_programs.py:89: SyntaxWarning: invalid escape sequence '\;'
+  orca_common = """#Set MPI Variables
+/home/zander/github/optavc/template.py:101: SyntaxWarning: invalid escape sequence '\s'
+  body_template = re.sub('\s*(-?\d+\.\d*)', ' {:> 17.12f}', coord_str)
+Traceback (most recent call last):
+  File "/home/zander/github/presentations/homework/main.py", line 12, in <module>
+    options_obj = options.Options(**options_kwargs)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/zander/github/optavc/options.py", line 321, in __init__
+    self.queue = kwargs.pop("queue", "")
+    ^^^^^^^^^^
+  File "/home/zander/github/optavc/options.py", line 461, in queue
+    raise ValueError('Do not have a default queue for specified cluster'
+ValueError: Do not have a default queue for specified clusterPlease specify a queue
+Traceback (most recent call last):
+  File "/home/zander/github/presentations/homework/main.py", line 13, in <module>
+    options_obj = options.Options(**options_kwargs)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/zander/github/optavc/options.py", line 340, in __init__
+    self.wait_time = kwargs.pop("wait_time", None)
+    ^^^^^^^^^^^^^^
+  File "/home/zander/github/optavc/options.py", line 500, in wait_time
+    raise ValueError(f"Cannot use 'wait_time' with current cluster {self.cluster}")
+ValueError: Cannot use 'wait_time' with current cluster HOST
+Traceback (most recent call last):
+  File "/home/zander/github/presentations/homework/main.py", line 22, in <module>
+    grad_obj.compute_result()
+  File "/home/zander/github/optavc/findifcalcs.py", line 154, in compute_result
+    self.run()
+  File "/home/zander/github/optavc/findifcalcs.py", line 355, in run
+    super().run()
+  File "/home/zander/github/optavc/findifcalcs.py", line 140, in run
+    self.job_ids = self.run_individual()
+                   ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/zander/github/optavc/findifcalcs.py", line 124, in run_individual
+    job_ids = [calc.run() for calc in self.calculations]
+               ^^^^^^^^^^
+  File "/home/zander/github/optavc/calculations.py", line 224, in run
+    output = self.cluster.submit(self.options)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/zander/github/optavc/cluster.py", line 95, in submit
+    process = subprocess.run([submit_command, './optstep.sh'], stdout=pipe, stderr=pipe,
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/zander/miniconda3/envs/quantum_dev/lib/python3.12/subprocess.py", line 548, in run
+    with Popen(*popenargs, **kwargs) as process:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/zander/miniconda3/envs/quantum_dev/lib/python3.12/subprocess.py", line 1026, in __init__
+    self._execute_child(args, executable, preexec_fn, close_fds,
+  File "/home/zander/miniconda3/envs/quantum_dev/lib/python3.12/subprocess.py", line 1950, in _execute_child
+    raise child_exception_type(errno_num, err_msg, err_filename)
+FileNotFoundError: [Errno 2] No such file or directory: 'sbatch'

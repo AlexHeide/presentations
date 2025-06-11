@@ -1,0 +1,13 @@
+
+         ----------------------------------------------------------
+                                   FINDIF
+                     R. A. King and Jonathon Misiewicz
+         ----------------------------------------------------------
+
+  Using finite-differences of energies to determine gradients.
+    Generating geometries for use with 3-point formula.
+    Displacement size will be 5.00e-03.
+    Number of atoms is 3.
+    Number of symmetric SALCs is 2.
+    Translations projected? 1. Rotations projected? 1.
+    Number of geometries (including reference) is 5.
